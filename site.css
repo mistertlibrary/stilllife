@@ -136,3 +136,30 @@ body.print-half .print-only{display:block}
 .half .qs{margin:.04in 0 0}
 .half .qs li{margin:0 0 .04in}
 }
+.courses{list-style:none;padding:0;margin:1.2rem 0 0;counter-reset:c}
+.courses li{position:relative;padding:0 0 0 2.6rem;margin:0 0 1.1rem}
+.courses li::before{counter-increment:c;content:counter(c);position:absolute;left:0;top:.1rem;width:1.8rem;height:1.8rem;border:1.5px solid var(--red);color:var(--red);font:600 .85rem/1.75rem var(--sans);text-align:center;font-variant-numeric:tabular-nums}
+.courses strong{display:block;font:600 .8rem/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.pantry{list-style:none;padding:0;margin:1rem 0 0;display:grid;gap:.8rem}
+.pantry li{border-top:1px solid var(--line);padding-top:.8rem}
+.pantry a{font-weight:600}
+.sheet .intro{text-align:center;font:italic 400 1.05rem/1.5 var(--serif);color:var(--muted);margin:0 0 .4rem}
+.trail-print{display:none}
+@media print{
+body.print-trail main,body.print-trail .foot{display:none}
+body.print-trail .trail-print{display:block}
+.trail-print .menu-page{break-after:page;text-align:center}
+.trail-print .menu-page img{max-height:8.6in;width:auto;max-width:100%;border:1px solid #000}
+.trail-print .menu-page p{font:400 8.5pt var(--sans);margin:.08in 0 0}
+.trail-print h2{text-align:left;font-size:16pt;margin:0 0 .06in}
+.trail-print .k{font:600 8pt var(--sans);letter-spacing:.12em;text-transform:uppercase;margin:0}
+.trail-print .name{display:flex;gap:.4in;font:600 9pt var(--sans);margin:.04in 0 .12in}
+.trail-print .name span{flex:1;border-bottom:1px solid #000;padding-bottom:.04in}
+.trail-print .name span:last-child{flex:0 0 1.6in}
+.trail-print table{width:100%;border-collapse:collapse;font-size:9.5pt}
+.trail-print th,.trail-print td{border:1px solid #000;padding:.06in;text-align:left;vertical-align:top}
+.trail-print th[scope=row]{width:1in;font:600 8.5pt var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.trail-print td.p{width:2.1in}
+.trail-print td.n{height:.62in}
+}
+.sheet .frame.tall img{max-height:36rem}
